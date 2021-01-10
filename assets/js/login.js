@@ -23,7 +23,7 @@ $(function(){
           //阻止表单默认行为
           e.preventDefault();
           //发起请求注册新用户
-         $.post('http://api-breakingnews-web.itheima.net/api/reguser',{username:$('.reg [name=username').val(),password:$('.reg [name=password]').val()},function(res){
+         $.post('/api/reguser',{username:$('.reg [name=username').val(),password:$('.reg [name=password]').val()},function(res){
             if(res.status !==0 ){
                return console.log(res.message);
             }
@@ -37,7 +37,7 @@ $(function(){
           //阻止表单默认行为
           e.preventDefault();
           //发起登录请求
-          $.post('http://api-breakingnews-web.itheima.net/api/login',{username:$('.login [name=username').val(),password:$('.login [name=password]').val()},function(res){
+          $.post('/api/login',{username:$('.login [name=username').val(),password:$('.login [name=password]').val()},function(res){
             if(res.status !==0 ){
                 return console.log('登录失败！');
              }
